@@ -1,0 +1,43 @@
+#nombre del schema tour_hotels
+
+CREATE TABLE `reservations` (
+  `id` integer,
+  `capacity` integer,
+  `date` date,
+  `time` time,
+  `status` boolean,
+  `total_days` integer,
+  `payment` boolean,
+  `created_at` timestamp,
+  `updated_at` timestamp,
+  `id_customer` integer,
+  `id_room` integer,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `hotels` (
+  `id` integer,
+  `name` varchar (250) ,
+  `description` varchar (250) ,
+  `location` varchar (250) ,
+  `active` boolean,
+  `checkin` datetime,
+  `checkout` datetime,
+  `create_at` timestamp,
+  `updated_at` timestamp,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Rooms` (
+  `id` integer,
+  `capacitity` integer,
+  `date` date,
+  `time` datetime,
+  `status` boolean,
+  `type` varchar (250),
+  `price` double,
+  `created_at` timestamp,
+  `updated_at` timestamp,
+  `id_hotel` integer,
+  PRIMARY KEY (`id`)
+);
