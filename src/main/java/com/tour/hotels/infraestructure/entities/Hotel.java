@@ -13,7 +13,7 @@ public class Hotel {
     @Column(name = "id")
     private Integer idHotel;
 
-    @Column(name = "id")
+    @Column(name = "name")
     private String nameHotel;
 
     private String description;

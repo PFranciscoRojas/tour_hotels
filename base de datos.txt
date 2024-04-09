@@ -1,4 +1,6 @@
 #nombre del schema tour_hotels
+#AGREGAR LLAVER FORANEAS
+CREATE
 
 CREATE TABLE `reservations` (
   `id` integer,
