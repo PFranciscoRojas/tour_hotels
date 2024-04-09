@@ -24,10 +24,8 @@ private Timestamp createdAt;
 private Timestamp updatedAt;
 @Column (name = "id_Hotel")
 private Long idHotel;
-
 @ManyToOne
 private Hotel hotel;
-
 public Long getId() {
     return id;
 }
@@ -58,7 +56,6 @@ public Boolean getStatus() {
 public void setStatus(Boolean status) {
     this.status = status;
 }
-
 public String getType() {
     return type;
 }
@@ -71,7 +68,6 @@ public double getPrice() {
 public void setPrice(double price) {
     this.price = price;
 }
-
 public Timestamp getCreatedAt() {
     return createdAt;
 }

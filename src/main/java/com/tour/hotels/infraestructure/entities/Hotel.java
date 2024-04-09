@@ -5,33 +5,24 @@ import java.text.DateFormat;
 import java.util.List;
 
 @Entity
-@Table(name = "Hotels")
+@Table(name = "hotels")
 public class Hotel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer idHotel;
-
     @Column(name = "name")
     private String nameHotel;
-
     private String description;
-
     private String location;
-
     private boolean active;
-
     private boolean checkin;
-
     private boolean checkout;
-
     @Column(name = "create_at")
     private DateFormat createAt;
-
     @Column(name = "updated_at")
     private DateFormat updatedAt;
-
     @OneToMany(mappedBy = "Hotel", cascade = CascadeType.ALL)
 
     private List<Room> rooms;

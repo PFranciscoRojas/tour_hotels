@@ -23,12 +23,10 @@ public class Reservation {
     private DateFormat createdAt;
     @Column(name = "updated_at")
     private DateFormat updatedAt;
-
     @Column(name = "id_customer")
     private Integer idCustomer;
     @Column(name = "id_room")
     private Integer idRoom;
-
 
     @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
 
