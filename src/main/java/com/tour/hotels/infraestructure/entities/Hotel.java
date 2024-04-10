@@ -23,7 +23,7 @@ public class Hotel {
     private DateFormat createAt;
     @Column(name = "updated_at")
     private DateFormat updatedAt;
-    @OneToMany(mappedBy = "Hotel", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
     private List<Room> rooms;
 

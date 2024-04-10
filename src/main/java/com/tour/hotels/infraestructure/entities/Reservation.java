@@ -28,8 +28,9 @@ public class Reservation {
     @Column(name = "id_room")
     private Integer idRoom;
 
-    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
-
+    //@OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
+    //private List<Room> rooms;
+    @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
     private List<Room> rooms;
 
     public Integer getIdReservation() {
