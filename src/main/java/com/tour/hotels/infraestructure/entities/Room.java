@@ -4,7 +4,7 @@ import java.security.Timestamp;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Room")
+@Table(name = "rooms")
 
 public class Room {
 
@@ -26,6 +26,11 @@ private Timestamp updatedAt;
 private Long idHotel;
 @ManyToOne
 private Hotel hotel;
+
+@ManyToOne
+@JoinColumn(name = "id_reservation")
+private Reservation reservation;
+
 public Long getId() {
     return id;
 }
