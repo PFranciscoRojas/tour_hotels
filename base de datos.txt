@@ -1,5 +1,5 @@
-#nombre del schema tour_hotels
-#AGREGAR LLAVER FORANEAS
+CREATE DATABASE hotels;
+USE hotels;
 CREATE
 
 CREATE TABLE `reservations` (
@@ -43,3 +43,15 @@ CREATE TABLE `Rooms` (
   `id_hotel` integer,
   PRIMARY KEY (`id`)
 );
+
+
+
+ALTER TABLE reservations
+ADD CONSTRAINT fk_id_room
+FOREIGN KEY (id_room)
+REFERENCES Rooms(id);
+
+ALTER TABLE Rooms
+ADD CONSTRAINT fk_hotel_id
+FOREIGN KEY (id_hotel)
+REFERENCES hotels(id);
