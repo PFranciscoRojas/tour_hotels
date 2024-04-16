@@ -10,16 +10,17 @@ import org.mapstruct.Mappings;
 import java.util.List;
 import java.util.Optional;
 
-@Mapper(componentModel = "spring", uses = {WriterMapper.class})
+@Mapper(componentModel = "spring", uses = {RoomMapper.class})
 public interface ReservationMapper {
     @Mappings({
             @Mapping(source = "idReservation", target ="reservacionId"),
             @Mapping(source = "capacity", target ="capacidad"),
             @Mapping(source = "date", target ="fecha"),
             @Mapping(source = "time", target ="hora"),
-            @Mapping(source = "status", target ="estado"),
-            @Mapping(source = "totalDays", target ="totalDias"),
-            @Mapping(source = "payment", target ="pago")
+            @Mapping(source = "payment", target ="pago"),
+            //@Mapping(source = "status", target ="estado"),
+            @Mapping(source = "totalDays", target ="totalDias")
+
     })
     ReservationDto toReservationDto(Reservation reservation);
     List<ReservationDto> toReservationDto(List<Reservation> reservation);
