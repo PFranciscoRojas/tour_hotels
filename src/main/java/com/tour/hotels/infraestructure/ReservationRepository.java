@@ -2,13 +2,14 @@ package com.tour.hotels.infraestructure;
 
 import com.tour.hotels.domain.dto.ReservationDto;
 
+import com.tour.hotels.domain.repository.ReservaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class ReservaRepository implements ReservationRepository {
+public class ReservationRepository implements ReservaRepository {
     @Override
     public List<ReservationDto> getAll() {
         return null;

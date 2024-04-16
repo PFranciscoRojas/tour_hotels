@@ -14,18 +14,21 @@ public class ReservationService {
     private ReservaRepository reservationRepo;
 
     public List<ReservationDto> getAll(){
+
         return reservationRepo.getAll();
     }
     public Optional<ReservationDto> getByID(long reservacionId){
+
         return reservationRepo.getById(reservacionId);
     }
 
     public ReservationDto save (ReservationDto reservationDto){
+
         return reservationRepo.save(reservationDto);
     }
     public boolean delete(long reservacionId){
         if(getByID(reservacionId).isPresent()){
-            reservationRepo.delete(reservacionId);
+            reservationRepo.deleteByID(reservacionId);
             return true;
         }
         return false;
