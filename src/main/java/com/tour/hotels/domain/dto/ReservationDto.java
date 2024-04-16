@@ -1,70 +1,63 @@
 package com.tour.hotels.domain.dto;
 
+import java.sql.Time;
 import java.text.DateFormat;
+import java.util.Date;
 
 public class ReservationDto {
-    private Integer ReservacionId;
-    private String nombre;
-    private String descripcion;
-    private String localizacion;
-    private  boolean activo;
-    private DateFormat ingreso;
-    private DateFormat salida;
+    private Integer reservacionId;
+    private String capacidad;
+    private Date fecha;
+    private Time hora;
+    private  Integer totalDias;
+    private boolean pago;
 
     public Integer getReservacionId() {
-        return ReservacionId;
+        return reservacionId;
     }
 
     public void setReservacionId(Integer reservacionId) {
-        ReservacionId = reservacionId;
+        reservacionId = reservacionId;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCapacidad() {
+        return capacidad;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCapacidad(String capacidad) {
+        this.capacidad = capacidad;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    public String getLocalizacion() {
-        return localizacion;
+    public Time getHora() {
+        return hora;
     }
 
-    public void setLocalizacion(String localizacion) {
-        this.localizacion = localizacion;
+    public void setHora(Time hora) {
+        this.hora = hora;
     }
 
-    public boolean isActivo() {
-        return activo;
+    public Integer getTotalDias() {
+        return totalDias;
     }
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
+    public void setTotalDias(Integer totalDias) {
+        this.totalDias = totalDias;
     }
 
-    public DateFormat getIngreso() {
-        return ingreso;
+    public boolean isPago() {
+        return pago;
     }
 
-    public void setIngreso(DateFormat ingreso) {
-        this.ingreso = ingreso;
-    }
-
-    public DateFormat getSalida() {
-        return salida;
-    }
-
-    public void setSalida(DateFormat salida) {
-        this.salida = salida;
+    public void setPago(boolean pago) {
+        this.pago = pago;
     }
 }
 
