@@ -129,4 +129,3 @@ public class Reservation {
         this.rooms = rooms;
     }
 }
-//getters and setters

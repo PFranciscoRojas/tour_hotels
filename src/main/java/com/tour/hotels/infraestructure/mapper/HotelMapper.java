@@ -18,7 +18,7 @@ public interface HotelMapper {
             @Mapping(source = "nameHotel", target ="nombre"),
             @Mapping(source = "location", target ="ubicacion"),
             @Mapping(source = "description", target ="descripcion"),
-            @Mapping(source = "rooms", target ="habitacionesDisponibles")
+            //@Mapping(source = "rooms", target ="habitacionesDisponibles")
     })
     HotelDto toHotelDto(Hotel hotel);
     List<HotelDto> toHotelDto(List<Hotel> hotel);
