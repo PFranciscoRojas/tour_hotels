@@ -13,15 +13,12 @@ public class HotelExpoRepository implements HotelesExpoRepository {
     public List<HotelDtoExpo> getAll() {
         return null;
     }
-
     @Override
     public Optional<HotelDtoExpo> getById(long idHotel) {
         return Optional.empty();
     }
-
     @Override
     public void deleteByID(long idHotel) {}
-
     @Override
     public HotelDtoExpo save(HotelDtoExpo hotelDtoExpo) {
         return null;

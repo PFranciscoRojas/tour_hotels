@@ -1,36 +1,39 @@
 package com.tour.hotels.application;
 
 import com.tour.hotels.domain.dto.HotelDto;
+import com.tour.hotels.domain.dto.HotelDtoExpo;
+import com.tour.hotels.domain.service.HotelExpoService;
 import com.tour.hotels.domain.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 @RestController
-@RequestMapping("/hotels")
-public class HotelController {
+@RequestMapping("/hotelsExpo")
+public class HotelExpoController {
     @Autowired
-    private HotelService hotelSrv;
+    private HotelExpoService hotelExpoSrv;
 
     @GetMapping()
-    public List<HotelDto> getAll(){
-        return hotelSrv.getAll();
+    public List<HotelDtoExpo> getAll(){
+        return hotelExpoSrv.getAll();
     }
     @GetMapping("{id}")
-    public Optional<HotelDto> getByID(@PathVariable("id") long hotelId){
-        return hotelSrv.getByID(hotelId);
+    public Optional<HotelDtoExpo> getByID(@PathVariable("id") long hotelId){
+        return hotelExpoSrv.getByID(hotelId);
     }
 
     @PostMapping()
-    public HotelDto save (@RequestBody HotelDto hotelDto){
-        return hotelSrv.save(hotelDto);
+    public HotelDtoExpo save (@RequestBody HotelDtoExpo hotelDtoExpo){
+        return hotelExpoSrv.save(hotelDtoExpo);
     }
 
     @DeleteMapping("{id}")
     public boolean delete(@PathVariable("id") int hotelId){
         if(getByID(hotelId).isPresent()){
-            hotelSrv.delete(hotelId);
+            hotelExpoSrv.delete(hotelId);
             return true;
         }
         return false;
