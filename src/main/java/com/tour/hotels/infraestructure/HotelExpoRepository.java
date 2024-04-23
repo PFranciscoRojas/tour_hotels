@@ -1,14 +1,14 @@
 package com.tour.hotels.infraestructure;
 
 import com.tour.hotels.domain.dto.HotelDtoExpo;
-import com.tour.hotels.domain.repository.HotelExpoRepository;
+import com.tour.hotels.domain.repository.HotelesExpoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class HotelExpoRepository implements HotelExpoRepository {
+public class HotelExpoRepository implements HotelesExpoRepository {
     @Override
     public List<HotelDtoExpo> getAll() {
         return null;

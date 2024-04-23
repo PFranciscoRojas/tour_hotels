@@ -1,12 +1,11 @@
 package com.tour.hotels.domain.repository;
 
-import com.tour.hotels.domain.dto.HotelDto;
 import com.tour.hotels.domain.dto.HotelDtoExpo;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface HotelExpoRepository {
+public interface HotelesExpoRepository {
 
     List<HotelDtoExpo> getAll();
     Optional<HotelDtoExpo> getById(long idHotel);

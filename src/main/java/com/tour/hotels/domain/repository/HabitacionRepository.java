@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.tour.hotels.domain.dto.RoomDto;
 
-public interface RoomRepository {
+public interface HabitacionRepository {
 
     List <RoomDto> getAll();
     void deleteByID(Long id );

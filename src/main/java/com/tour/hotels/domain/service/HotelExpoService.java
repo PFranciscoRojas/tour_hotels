@@ -1,7 +1,9 @@
 package com.tour.hotels.domain.service;
 
 import com.tour.hotels.domain.dto.HotelDto;
-import com.tour.hotels.domain.repository.HotelRepository;
+import com.tour.hotels.domain.dto.HotelDtoExpo;
+import com.tour.hotels.domain.repository.HotelesExpoRepository;
+import com.tour.hotels.domain.repository.HotelesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,22 +12,22 @@ import java.util.Optional;
 
 @Service
 public class HotelExpoService {
-    private HotelRepository hotelRepo;
+    private HotelesExpoRepository hotelExpoRepo;
     @Autowired
-    public List<HotelDto> getAll(){
+    public List<HotelDtoExpo> getAll(){
 
-        return hotelRepo.getAll();
+        return hotelExpoRepo.getAll();
     }
-    public Optional<HotelDto> getByID(long hotelId){
+    public Optional<HotelDtoExpo> getByID(long hotelId){
 
-        return hotelRepo.getById(hotelId);
+        return hotelExpoRepo.getById(hotelId);
     }
-    public HotelDto save (HotelDto hotelDto){
-        return hotelRepo.save(hotelDto);
+    public HotelDtoExpo save (HotelDtoExpo hotelDtoExpo){
+        return hotelExpoRepo.save(hotelDtoExpo);
     }
     public boolean delete(long hotelId){
         if(getByID(hotelId).isPresent()){
-            hotelRepo.deleteByID(hotelId);
+            hotelExpoRepo.deleteByID(hotelId);
             return true;
         }
         return false;

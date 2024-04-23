@@ -7,25 +7,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tour.hotels.domain.dto.RoomDto;
-import com.tour.hotels.domain.repository.RoomRepository;
+import com.tour.hotels.domain.repository.HabitacionRepository;
 
 @Service
 public class RoomService {
     @Autowired
-    private RoomRepository roomRepository;
+    private HabitacionRepository habitacionRepository;
 
     public List<RoomDto> getAll(){
-        return roomRepository.getAll();
+        return habitacionRepository.getAll();
     }
     public Optional<RoomDto> getById(Long id){
-        return roomRepository.getById(id);
+        return habitacionRepository.getById(id);
     }
     public RoomDto save (RoomDto roomDto){
-        return roomRepository.save(roomDto);
+        return habitacionRepository.save(roomDto);
     }
     public boolean delete(Long id){
         if(getById(id).isPresent()){
-            roomRepository.deleteByID(id);
+            habitacionRepository.deleteByID(id);
             return true;
         }
         return false;
