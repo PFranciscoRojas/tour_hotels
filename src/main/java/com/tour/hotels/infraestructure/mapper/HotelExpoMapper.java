@@ -1,7 +1,6 @@
 package com.tour.hotels.infraestructure.mapper;
 
 import com.tour.hotels.domain.dto.HotelDto;
-
 import com.tour.hotels.infraestructure.entities.Hotel;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -10,8 +9,9 @@ import org.mapstruct.Mappings;
 
 import java.util.List;
 import java.util.Optional;
+
 @Mapper(componentModel = "spring", uses = {RoomMapper.class})
-public interface HotelMapper {
+public interface HotelExpoMapper {
 
     @Mappings({
             @Mapping(source = "idHotel", target ="hotelId"),
