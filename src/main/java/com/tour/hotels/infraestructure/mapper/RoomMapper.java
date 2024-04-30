@@ -26,6 +26,7 @@ public interface RoomMapper {
     })
     
     RoomDto toRoomdDto(Room room);
+
     
     List<RoomDto> toRoomDtos(List<Room> rooms);
     
@@ -33,8 +34,12 @@ public interface RoomMapper {
         return room.map(this::toRoomdDto);
 }
 
+
 @InheritInverseConfiguration
 
 Room toRoom(RoomDto roomDto);
+
+
+Optional<Integer> toRoom(Optional<Room> room);
 
 }

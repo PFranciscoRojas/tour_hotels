@@ -52,6 +52,10 @@ public class RoomDto {
     public void setIde(Long ide) {
         this.ide = ide;
     }
+    public static boolean finById(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'finById'");
+    }
 
     
 }

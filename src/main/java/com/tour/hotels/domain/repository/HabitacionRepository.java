@@ -11,6 +11,6 @@ public interface HabitacionRepository {
     void deleteByID(Long id );
     Optional<RoomDto> getById(Long id);
     boolean isRoomAviable(Long id);
-    int whatIsItCapacity(Long id);
+    Optional<Integer> whatIsItCapacity(Long id);
     RoomDto save(RoomDto roomDto);
 }
