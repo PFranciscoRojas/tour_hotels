@@ -26,8 +26,6 @@ public class ReservationRepository implements ReservaRepository {
 
     @Override
     public ReservationDto save(ReservationDto reservationDto) {
-        return null;
-    public EventDto save(EventDto eventDto) {
         Reservation reservation = reservationMapper.toReservation(ReservationDto);
         return reservationMapper.toReservationDto(reservationRepo.save(reservation));
     }
