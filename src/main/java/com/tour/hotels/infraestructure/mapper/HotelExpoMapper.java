@@ -1,6 +1,6 @@
 package com.tour.hotels.infraestructure.mapper;
 
-import com.tour.hotels.domain.dto.HotelDto;
+import com.tour.hotels.domain.dto.HotelDtoExpo;
 import com.tour.hotels.infraestructure.entities.Hotel;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -20,11 +20,11 @@ public interface HotelExpoMapper {
             @Mapping(source = "description", target ="descripcion"),
             //@Mapping(source = "rooms", target ="habitacionesDisponibles")
     })
-    HotelDto toHotelDto(Hotel hotel);
-    List<HotelDto> toHotelDto(List<Hotel> hotel);
-    default Optional<HotelDto> toHotelDtoOptional(Optional<Hotel> hotel ){
-        return  hotel.map(this::toHotelDto);
+    HotelDtoExpo toHotelDtoExpo(Hotel hotel);
+    List<HotelDtoExpo> toHotelDtoExpo(List<Hotel> hotel);
+    default Optional<HotelDtoExpo> toHotelDtoExpoOptional(Optional<Hotel> hotel ){
+        return  hotel.map(this::toHotelDtoExpo);
     }
     @InheritInverseConfiguration
-    Hotel toHotel(HotelDto hotelDto);
+    Hotel toHotel(HotelDtoExpo hotelDtoExpo);
 }

@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 @Service
 public class HotelService {
+    @Autowired
     private HotelesRepository hotelRepo;
     @Autowired
     public List<HotelDto> getAll(){
