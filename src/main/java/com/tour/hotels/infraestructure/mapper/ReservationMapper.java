@@ -29,4 +29,5 @@ public interface ReservationMapper {
     }
     @InheritInverseConfiguration
     Reservation toReservation(ReservationDto reservationDto);
+
 }
