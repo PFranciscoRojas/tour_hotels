@@ -1,4 +1,8 @@
 package com.tour.hotels.infraestructure.repositories;
 
-public interface HotelCroudRepository {
+import com.tour.hotels.infraestructure.entities.Reservation;
+import org.springframework.data.repository.CrudRepository;
+
+public interface HotelCroudRepository extends CrudRepository<Reservation,Integer>  {
+
 }

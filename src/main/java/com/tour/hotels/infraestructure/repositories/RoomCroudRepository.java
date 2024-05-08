@@ -1,20 +1,9 @@
-package com.tour.hotels.infraestructure.repositories;
-
-import java.util.List;
-import java.util.Optional;
-
-import com.tour.hotels.domain.dto.RoomDto;
-import com.tour.hotels.infraestructure.entities.Room;
-
-public interface RoomCroudRepository {
-
-    List<Room> findAll();
-
-    void deleteById(Long id);
-
-    Optional<Room> finById(Long id);
-
-    RoomDto save(RoomDto roomDto);
-
-
-}
+/*
+ * Copyright (c) 1998, 2023, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular
+ */
