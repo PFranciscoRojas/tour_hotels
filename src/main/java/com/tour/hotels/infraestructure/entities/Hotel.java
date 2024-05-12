@@ -26,7 +26,6 @@ public class Hotel {
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
     private List<Room> rooms;
-
     public Integer getIdHotel() {
         return idHotel;
     }
