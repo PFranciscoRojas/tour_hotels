@@ -1,6 +1,5 @@
 CREATE DATABASE hotels;
 USE hotels;
-CREATE
 
 CREATE TABLE `reservations` (
   `id` integer,

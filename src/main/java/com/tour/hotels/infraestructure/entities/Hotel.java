@@ -17,8 +17,8 @@ public class Hotel {
     private String description;
     private String location;
     private boolean active;
-    private boolean checkin;
-    private boolean checkout;
+    private DateFormat checkin;
+    private DateFormat checkout;
     @Column(name = "create_at")
     private DateFormat createAt;
     @Column(name = "updated_at")
@@ -26,7 +26,6 @@ public class Hotel {
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
     private List<Room> rooms;
-
     public Integer getIdHotel() {
         return idHotel;
     }

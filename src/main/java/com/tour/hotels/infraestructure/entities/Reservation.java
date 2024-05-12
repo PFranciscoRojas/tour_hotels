@@ -32,7 +32,6 @@ public class Reservation {
     //private List<Room> rooms;
     @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
     private List<Room> rooms;
-
     public Integer getIdReservation() {
         return idReservation;
     }

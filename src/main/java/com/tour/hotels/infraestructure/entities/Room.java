@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Table(name = "rooms")
 
 public class Room {
-
+//revisar el tipo de dato con la base de datos y generar nuevamente los getters and setters revisar los demas archivos
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "id")

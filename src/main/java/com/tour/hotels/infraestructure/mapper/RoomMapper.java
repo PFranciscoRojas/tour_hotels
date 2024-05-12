@@ -40,6 +40,6 @@ public interface RoomMapper {
 Room toRoom(RoomDto roomDto);
 
 
-Optional<Integer> toRoom(Optional<Room> room);
+//Optional<Integer> toRoom(Optional<Room> room);
 
 }
