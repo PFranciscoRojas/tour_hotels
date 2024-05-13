@@ -1,6 +1,5 @@
 CREATE DATABASE hotels;
 USE hotels;
-CREATE
 
 CREATE TABLE `reservations` (
   `id` integer,
@@ -34,7 +33,7 @@ CREATE TABLE `Rooms` (
   `id` integer,
   `capacitity` integer,
   `date` date,
-  `time` datetime,
+  `time` time,
   `status` boolean,
   `type` varchar (250),
   `price` double,

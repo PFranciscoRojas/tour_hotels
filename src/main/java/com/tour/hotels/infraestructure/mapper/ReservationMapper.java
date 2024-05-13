@@ -18,7 +18,7 @@ public interface ReservationMapper {
             @Mapping(source = "date", target ="fecha"),
             @Mapping(source = "time", target ="hora"),
             @Mapping(source = "payment", target ="pago"),
-            //@Mapping(source = "status", target ="estado"),
+            @Mapping(source = "status", target ="estado"),
             @Mapping(source = "totalDays", target ="totalDias")
 
     })

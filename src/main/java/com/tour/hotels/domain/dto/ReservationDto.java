@@ -9,8 +9,17 @@ public class ReservationDto {
     private String capacidad;
     private Date fecha;
     private Time hora;
+    private Boolean estado;
     private  Integer totalDias;
     private boolean pago;
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
 
     public Integer getReservacionId() {
         return reservacionId;

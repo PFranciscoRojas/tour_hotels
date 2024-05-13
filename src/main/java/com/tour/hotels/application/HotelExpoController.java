@@ -1,9 +1,8 @@
 package com.tour.hotels.application;
 
-import com.tour.hotels.domain.dto.HotelDto;
 import com.tour.hotels.domain.dto.HotelDtoExpo;
 import com.tour.hotels.domain.service.HotelExpoService;
-import com.tour.hotels.domain.service.HotelService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

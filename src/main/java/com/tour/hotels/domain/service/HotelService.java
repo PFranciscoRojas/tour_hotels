@@ -11,7 +11,7 @@ import java.util.Optional;
 public class HotelService {
     @Autowired
     private HotelesRepository hotelRepo;
-    @Autowired
+
     public List<HotelDto> getAll(){
 
         return hotelRepo.getAll();

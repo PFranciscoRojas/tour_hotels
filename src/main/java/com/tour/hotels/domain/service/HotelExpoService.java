@@ -1,9 +1,7 @@
 package com.tour.hotels.domain.service;
 
-import com.tour.hotels.domain.dto.HotelDto;
 import com.tour.hotels.domain.dto.HotelDtoExpo;
 import com.tour.hotels.domain.repository.HotelesExpoRepository;
-import com.tour.hotels.domain.repository.HotelesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +12,7 @@ import java.util.Optional;
 public class HotelExpoService {
     @Autowired
     private HotelesExpoRepository hotelExpoRepo;
-    @Autowired
+
     public List<HotelDtoExpo> getAll(){
 
         return hotelExpoRepo.getAll();

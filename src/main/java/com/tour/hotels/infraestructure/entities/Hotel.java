@@ -17,8 +17,8 @@ public class Hotel {
     private String description;
     private String location;
     private boolean active;
-    private boolean checkin;
-    private boolean checkout;
+    private DateFormat checkin;
+    private DateFormat checkout;
     @Column(name = "create_at")
     private DateFormat createAt;
     @Column(name = "updated_at")
@@ -66,19 +66,19 @@ public class Hotel {
         this.active = active;
     }
 
-    public boolean isCheckin() {
+    public DateFormat isCheckin() {
         return checkin;
     }
 
-    public void setCheckin(boolean checkin) {
+    public void setCheckin(DateFormat checkin) {
         this.checkin = checkin;
     }
 
-    public boolean isCheckout() {
+    public DateFormat isCheckout() {
         return checkout;
     }
 
-    public void setCheckout(boolean checkout) {
+    public void setCheckout(DateFormat checkout) {
         this.checkout = checkout;
     }
 
