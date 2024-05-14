@@ -5,34 +5,26 @@ import java.util.Date;
 
 public class ReservationDto {
     private Integer reservacionId;
-    private String capacidad;
+    private Integer capacidad;
     private Date fecha;
     private Time hora;
-    private Boolean estado;
+    private boolean estado;
     private  Integer totalDias;
     private boolean pago;
-
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
 
     public Integer getReservacionId() {
         return reservacionId;
     }
 
     public void setReservacionId(Integer reservacionId) {
-        reservacionId = reservacionId;
+        this.reservacionId = reservacionId;
     }
 
-    public String getCapacidad() {
+    public Integer getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(String capacidad) {
+    public void setCapacidad(Integer capacidad) {
         this.capacidad = capacidad;
     }
 
@@ -50,6 +42,14 @@ public class ReservationDto {
 
     public void setHora(Time hora) {
         this.hora = hora;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     public Integer getTotalDias() {

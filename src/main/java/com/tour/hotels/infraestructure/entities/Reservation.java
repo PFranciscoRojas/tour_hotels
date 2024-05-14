@@ -1,5 +1,7 @@
 package com.tour.hotels.infraestructure.entities;
 import jakarta.persistence.*;
+
+import java.security.Timestamp;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.util.Date;
@@ -20,9 +22,9 @@ public class Reservation {
     private Integer totalDays;
     private boolean payment;
     @Column(name = "created_at")
-    private DateFormat createdAt;
+    private Timestamp createdAt;
     @Column(name = "updated_at")
-    private DateFormat updatedAt;
+    private Timestamp updatedAt;
     @Column(name = "id_customer")
     private Integer idCustomer;
     @Column(name = "id_room")
@@ -75,16 +77,16 @@ public class Reservation {
     public void setPayment(boolean payment) {
         this.payment = payment;
     }
-    public DateFormat getCreatedAt() {
+    public Timestamp getCreatedAt() {
         return createdAt;
     }
-    public void setCreatedAt(DateFormat createdAt) {
+    public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
-    public DateFormat getUpdatedAt() {
+    public Timestamp getUpdatedAt() {
         return updatedAt;
     }
-    public void setUpdatedAt(DateFormat updatedAt) {
+    public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
     }
     public Integer getIdCustomer() {

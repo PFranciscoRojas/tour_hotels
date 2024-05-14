@@ -22,7 +22,7 @@ public class ReservationService {
         return reservationRepo.getById(reservacionId);
     }
 
-    public ReservationDto save (ReservationDto reservationDto){
+    public ReservationDto save(ReservationDto reservationDto){
 
         return reservationRepo.save(reservationDto);
     }
