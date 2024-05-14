@@ -1,7 +1,10 @@
 package com.tour.hotels.infraestructure.entities;
 
 import jakarta.persistence.*;
+
+import java.security.Timestamp;
 import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -17,12 +20,12 @@ public class Hotel {
     private String description;
     private String location;
     private boolean active;
-    private DateFormat checkin;
-    private DateFormat checkout;
+    private Timestamp checkin;
+    private Timestamp checkout;
     @Column(name = "create_at")
-    private DateFormat createAt;
+    private Timestamp createAt;
     @Column(name = "updated_at")
-    private DateFormat updatedAt;
+    private Timestamp updatedAt;
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
     private List<Room> rooms;
@@ -66,35 +69,35 @@ public class Hotel {
         this.active = active;
     }
 
-    public DateFormat isCheckin() {
+    public Timestamp isCheckin() {
         return checkin;
     }
 
-    public void setCheckin(DateFormat checkin) {
+    public void setCheckin(Timestamp checkin) {
         this.checkin = checkin;
     }
 
-    public DateFormat isCheckout() {
+    public Timestamp isCheckout() {
         return checkout;
     }
 
-    public void setCheckout(DateFormat checkout) {
+    public void setCheckout(Timestamp checkout) {
         this.checkout = checkout;
     }
 
-    public DateFormat getCreateAt() {
+    public Timestamp getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(DateFormat createAt) {
+    public void setCreateAt(Timestamp createAt) {
         this.createAt = createAt;
     }
 
-    public DateFormat getUpdatedAt() {
+    public Timestamp getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(DateFormat updatedAt) {
+    public void setUpdatedAt(Timestamp updatedAt) {
         this.updatedAt = updatedAt;
     }
 
