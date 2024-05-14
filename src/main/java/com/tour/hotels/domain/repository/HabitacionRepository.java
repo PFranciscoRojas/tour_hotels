@@ -10,7 +10,7 @@ public interface HabitacionRepository {
     List <RoomDto> getAll();
     void deleteByID(Long id );
     Optional<RoomDto> getById(Long id);
-    boolean isRoomAviable(Long id);
-    int whatIsItCapacity(Long id);
+    void isRoomAviable(Long id);
+    int whatIsItCapacity(int id); 
     RoomDto save(RoomDto roomDto);
 }
