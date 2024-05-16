@@ -1,4 +1,4 @@
-package com.tour.hotels.application;
+package com.tour.hotels.application.controller;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.tour.hotels.application;
+package com.tour.hotels.application.controller;
 
 import com.tour.hotels.domain.dto.HotelDto;
 import com.tour.hotels.domain.service.HotelService;
