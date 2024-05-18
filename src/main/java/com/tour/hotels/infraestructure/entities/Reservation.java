@@ -3,9 +3,7 @@ import jakarta.persistence.*;
 
 import java.security.Timestamp;
 import java.sql.Time;
-import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "reservations")
@@ -29,11 +27,9 @@ public class Reservation {
     private Integer idCustomer;
     @Column(name = "id_room")
     private Integer idRoom;
+    @ManyToOne
+    private Room room;
 
-    //@OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
-    //private List<Room> rooms;
-    @OneToMany(mappedBy = "reservation", cascade = CascadeType.ALL)
-    private List<Room> rooms;
     public Integer getIdReservation() {
         return idReservation;
     }
@@ -101,10 +97,5 @@ public class Reservation {
     public void setIdRoom(Integer idRoom) {
         this.idRoom = idRoom;
     }
-    public List<Room> getRooms() {
-        return rooms;
-    }
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
+   
 }

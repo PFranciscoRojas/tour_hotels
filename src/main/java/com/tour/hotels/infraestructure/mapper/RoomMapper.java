@@ -11,7 +11,7 @@ import org.mapstruct.Mappings;
 import com.tour.hotels.domain.dto.RoomDto;
 import com.tour.hotels.infraestructure.entities.Room;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {ReservationMapper.class})
 public interface RoomMapper{
     @Mappings({
         @Mapping(source = "id",target = "idHabitacion"),

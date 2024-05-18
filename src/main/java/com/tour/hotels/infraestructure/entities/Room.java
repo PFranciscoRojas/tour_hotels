@@ -4,17 +4,14 @@ import java.security.Timestamp;
 import java.sql.Date;
 import java.sql.Time;
 import java.text.DateFormat;
-
+import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "rooms")
-
 public class Room {
-
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id")
 private Long id;
 private Integer capacity;
 private Date date;
@@ -23,19 +20,22 @@ private Boolean status;
 private String type;
 private double price;
 @Column (name = "Create_at")
-private DateFormat createdAt;
+private Timestamp createdAt;
 @Column (name = "updated_at")
-private DateFormat updatedAt;
+private Timestamp updatedAt;
 @Column (name = "id_Hotel")
 private Integer idHotel;
-@ManyToOne
-private Hotel hotel;
 
-@ManyToOne
-@JoinColumn(name = "id_reservation")
-private Reservation reservation;
+@OneToMany(mappedBy = "room",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+private List<Reservation> reservations;
 
+public Long getId() {
+    return id;
+}
 
+public void setId(Long id) {
+    this.id = id;
+}
 
 public Integer getCapacity() {
     return capacity;
@@ -85,19 +85,19 @@ public void setPrice(double price) {
     this.price = price;
 }
 
-public DateFormat getCreatedAt() {
+public Timestamp getCreatedAt() {
     return createdAt;
 }
 
-public void setCreatedAt(DateFormat createdAt) {
+public void setCreatedAt(Timestamp createdAt) {
     this.createdAt = createdAt;
 }
 
-public DateFormat getUpdatedAt() {
+public Timestamp getUpdatedAt() {
     return updatedAt;
 }
 
-public void setUpdatedAt(DateFormat updatedAt) {
+public void setUpdatedAt(Timestamp updatedAt) {
     this.updatedAt = updatedAt;
 }
 
@@ -109,30 +109,13 @@ public void setIdHotel(Integer idHotel) {
     this.idHotel = idHotel;
 }
 
-public Hotel getHotel() {
-    return hotel;
+public List<Reservation> getReservations() {
+    return reservations;
 }
 
-public void setHotel(Hotel hotel) {
-    this.hotel = hotel;
+public void setReservations(List<Reservation> reservations) {
+    this.reservations = reservations;
 }
-
-public Reservation getReservation() {
-    return reservation;
-}
-
-public void setReservation(Reservation reservation) {
-    this.reservation = reservation;
-}
-
-public Long getId() {
-    return id;
-}
-
-public void setId(Long id) {
-    this.id = id;
-}
-
 
 
 

@@ -26,9 +26,8 @@ public class Hotel {
     private Timestamp createAt;
     @Column(name = "updated_at")
     private Timestamp updatedAt;
-    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
 
-    private List<Room> rooms;
+
     public Integer getIdHotel() {
         return idHotel;
     }
@@ -101,11 +100,4 @@ public class Hotel {
         this.updatedAt = updatedAt;
     }
 
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
 }
