@@ -1,20 +1,20 @@
 package com.tour.hotels.domain.dto;
 
-import java.text.DateFormat;
+import java.security.Timestamp;
 
 public class HotelDto {
   private Integer hotelId;
   private String nombre;
   private String ubicacion;
   private String descripcion;
-  private String habitacionesDisponibles;
+  private boolean activa;
 
-  private boolean Registro;
-  private boolean Salida;
+  private Timestamp entrada;
+  private Timestamp salida;
 
-  private DateFormat FechaRegistro;
+  private Timestamp fechaRegistro;
 
-  private DateFormat FechaSalida;
+  private Timestamp fechaSalida;
 
   public Integer getHotelId() {
     return hotelId;
@@ -48,43 +48,43 @@ public class HotelDto {
     this.descripcion = descripcion;
   }
 
-  public String getHabitacionesDisponibles() {
-    return habitacionesDisponibles;
+  public boolean isActiva() {
+    return activa;
   }
 
-  public void setHabitacionesDisponibles(String habitacionesDisponibles) {
-    this.habitacionesDisponibles = habitacionesDisponibles;
+  public void setActiva(boolean activa) {
+    this.activa = activa;
   }
 
-  public boolean isRegistro() {
-    return Registro;
+  public Timestamp getEntrada() {
+    return entrada;
   }
 
-  public void setRegistro(boolean registro) {
-    Registro = registro;
+  public void setEntrada(Timestamp entrada) {
+    this.entrada = entrada;
   }
 
-  public boolean isSalida() {
-    return Salida;
+  public Timestamp getSalida() {
+    return salida;
   }
 
-  public void setSalida(boolean salida) {
-    Salida = salida;
+  public void setSalida(Timestamp salida) {
+    this.salida = salida;
   }
 
-  public DateFormat getFechaRegistro() {
-    return FechaRegistro;
+  public Timestamp getFechaRegistro() {
+    return fechaRegistro;
   }
 
-  public void setFechaRegistro(DateFormat fechaRegistro) {
-    FechaRegistro = fechaRegistro;
+  public void setFechaRegistro(Timestamp fechaRegistro) {
+    this.fechaRegistro = fechaRegistro;
   }
 
-  public DateFormat getFechaSalida() {
-    return FechaSalida;
+  public Timestamp getFechaSalida() {
+    return fechaSalida;
   }
 
-  public void setFechaSalida(DateFormat fechaSalida) {
-    FechaSalida = fechaSalida;
+  public void setFechaSalida(Timestamp fechaSalida) {
+    this.fechaSalida = fechaSalida;
   }
 }
