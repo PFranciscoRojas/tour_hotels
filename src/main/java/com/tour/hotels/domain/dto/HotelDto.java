@@ -1,32 +1,22 @@
 package com.tour.hotels.domain.dto;
 
 import java.security.Timestamp;
-<<<<<<< HEAD
-=======
-import java.text.DateFormat;
->>>>>>> 347bb2c5377fd802eb48fff636ee57c810b053b7
 
 public class HotelDto {
   private Integer hotelId;
   private String nombre;
   private String ubicacion;
   private String descripcion;
-<<<<<<< HEAD
   private boolean activa;
-
   private Timestamp entrada;
   private Timestamp salida;
-
   private Timestamp fechaRegistro;
-
   private Timestamp fechaSalida;
-=======
   private String habitacionesDisponibles;
   private Timestamp Registro;
   private Timestamp Salida;
   private Timestamp FechaRegistro;
   private Timestamp FechaSalida;
->>>>>>> 347bb2c5377fd802eb48fff636ee57c810b053b7
 
   public Integer getHotelId() {
     return hotelId;
@@ -68,21 +58,20 @@ public class HotelDto {
     this.activa = activa;
   }
 
-<<<<<<< HEAD
-  public Timestamp getEntrada() {
-    return entrada;
-  }
-
-  public void setEntrada(Timestamp entrada) {
-    this.entrada = entrada;
-  }
-
   public Timestamp getSalida() {
     return salida;
   }
 
   public void setSalida(Timestamp salida) {
     this.salida = salida;
+  }
+
+  public Timestamp getEntrada() {
+    return entrada;
+  }
+
+  public void setEntrada(Timestamp entrada) {
+    this.entrada = entrada;
   }
 
   public Timestamp getFechaRegistro() {
@@ -99,37 +88,21 @@ public class HotelDto {
 
   public void setFechaSalida(Timestamp fechaSalida) {
     this.fechaSalida = fechaSalida;
-=======
-  public Timestamp isRegistro() {
+  }
+
+  public String getHabitacionesDisponibles() {
+    return habitacionesDisponibles;
+  }
+
+  public void setHabitacionesDisponibles(String habitacionesDisponibles) {
+    this.habitacionesDisponibles = habitacionesDisponibles;
+  }
+
+  public Timestamp getRegistro() {
     return Registro;
   }
 
   public void setRegistro(Timestamp registro) {
     Registro = registro;
-  }
-
-  public Timestamp isSalida() {
-    return Salida;
-  }
-
-  public void setSalida(Timestamp salida) {
-    Salida = salida;
-  }
-
-  public Timestamp getFechaRegistro() {
-    return FechaRegistro;
-  }
-
-  public void setFechaRegistro(Timestamp fechaRegistro) {
-    FechaRegistro = fechaRegistro;
-  }
-
-  public Timestamp getFechaSalida() {
-    return FechaSalida;
-  }
-
-  public void setFechaSalida(Timestamp fechaSalida) {
-    FechaSalida = fechaSalida;
->>>>>>> 347bb2c5377fd802eb48fff636ee57c810b053b7
   }
 }
