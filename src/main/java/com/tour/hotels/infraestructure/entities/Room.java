@@ -3,7 +3,6 @@ package com.tour.hotels.infraestructure.entities;
 import java.security.Timestamp;
 import java.sql.Date;
 import java.sql.Time;
-import java.text.DateFormat;
 import java.util.List;
 import jakarta.persistence.*;
 
@@ -116,8 +115,4 @@ public List<Reservation> getReservations() {
 public void setReservations(List<Reservation> reservations) {
     this.reservations = reservations;
 }
-
-
-
-
 }

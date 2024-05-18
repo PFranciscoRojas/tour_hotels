@@ -5,12 +5,8 @@ import com.tour.hotels.domain.repository.HabitacionRepository;
 import com.tour.hotels.infraestructure.entities.Room;
 import com.tour.hotels.infraestructure.mapper.RoomMapper;
 import com.tour.hotels.infraestructure.repositories.RoomCroudRepository;
-
-import scala.Int;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -47,8 +43,7 @@ class RoomRepository implements HabitacionRepository {
     
     final int areaTotal = 70;
     final int areaPorPersona = 6;
-    final int capacidadHab = whatIsItCapacity(areaTotal);
-
+    // final int capacidadHab = whatIsItCapacity(areaTotal);
     int capacid = areaTotal / areaPorPersona;
     return capacid;
     }
@@ -57,12 +52,5 @@ class RoomRepository implements HabitacionRepository {
     public RoomDto save(RoomDto roomDto) {
         Room room = roomMapper.aRoom(roomDto);
         return roomMapper.aRoomDto(roomRepoo.save(room));
-    }
-
-    // @Override
-    // public RoomDto findByRoom(RoomDto roomDto){
-           
-    //   return null;
-    // }
-    
+    }    
 }

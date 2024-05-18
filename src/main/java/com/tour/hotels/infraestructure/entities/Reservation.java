@@ -28,6 +28,7 @@ public class Reservation {
     @Column(name = "id_room")
     private Integer idRoom;
     @ManyToOne
+
     private Room room;
 
     public Integer getIdReservation() {
