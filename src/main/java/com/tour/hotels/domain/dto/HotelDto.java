@@ -1,5 +1,6 @@
 package com.tour.hotels.domain.dto;
 
+import java.security.Timestamp;
 import java.text.DateFormat;
 
 public class HotelDto {
@@ -10,11 +11,11 @@ public class HotelDto {
   private String habitacionesDisponibles;
 
   private boolean Registro;
-  private boolean Salida;
+  private Timestamp Salida;
 
-  private DateFormat FechaRegistro;
+  private Timestamp FechaRegistro;
 
-  private DateFormat FechaSalida;
+  private Timestamp FechaSalida;
 
   public Integer getHotelId() {
     return hotelId;
@@ -64,27 +65,27 @@ public class HotelDto {
     Registro = registro;
   }
 
-  public boolean isSalida() {
+  public Timestamp isSalida() {
     return Salida;
   }
 
-  public void setSalida(boolean salida) {
+  public void setSalida(Timestamp salida) {
     Salida = salida;
   }
 
-  public DateFormat getFechaRegistro() {
+  public Timestamp getFechaRegistro() {
     return FechaRegistro;
   }
 
-  public void setFechaRegistro(DateFormat fechaRegistro) {
+  public void setFechaRegistro(Timestamp fechaRegistro) {
     FechaRegistro = fechaRegistro;
   }
 
-  public DateFormat getFechaSalida() {
+  public Timestamp getFechaSalida() {
     return FechaSalida;
   }
 
-  public void setFechaSalida(DateFormat fechaSalida) {
+  public void setFechaSalida(Timestamp fechaSalida) {
     FechaSalida = fechaSalida;
   }
 }
