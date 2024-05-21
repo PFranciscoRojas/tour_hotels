@@ -21,6 +21,7 @@ public class HotelService {
         return hotelRepo.getById(hotelId);
     }
     public HotelDto save (HotelDto hotelDto){
+
         return hotelRepo.save(hotelDto);
     }
     public boolean delete(long hotelId){

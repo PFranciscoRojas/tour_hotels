@@ -2,15 +2,11 @@ package com.tour.hotels.infraestructure.entities;
 
 import jakarta.persistence.*;
 
-import java.security.Timestamp;
-import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "hotels")
 public class Hotel {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -20,14 +16,13 @@ public class Hotel {
     private String description;
     private String location;
     private boolean active;
-    private Timestamp checkin;
-    private Timestamp checkout;
+    private Date checkin;
+    private Date checkout;
     @Column(name = "create_at")
-    private Timestamp createAt;
+    private Date createAt;
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
 
-
+    private Date updatedAt;
     public Integer getIdHotel() {
         return idHotel;
     }
@@ -68,36 +63,35 @@ public class Hotel {
         this.active = active;
     }
 
-    public Timestamp isCheckin() {
+    public Date getCheckin() {
         return checkin;
     }
 
-    public void setCheckin(Timestamp checkin) {
+    public void setCheckin(Date checkin) {
         this.checkin = checkin;
     }
 
-    public Timestamp isCheckout() {
+    public Date getCheckout() {
         return checkout;
     }
 
-    public void setCheckout(Timestamp checkout) {
+    public void setCheckout(Date checkout) {
         this.checkout = checkout;
     }
 
-    public Timestamp getCreateAt() {
+    public Date getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(Timestamp createAt) {
+    public void setCreateAt(Date createAt) {
         this.createAt = createAt;
     }
 
-    public Timestamp getUpdatedAt() {
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Timestamp updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
 }
