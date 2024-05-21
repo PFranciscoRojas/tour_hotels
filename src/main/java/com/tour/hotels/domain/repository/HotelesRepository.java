@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface HotelesRepository {
-
     List<HotelDto> getAll();
     Optional<HotelDto> getById(long idHotel);
 

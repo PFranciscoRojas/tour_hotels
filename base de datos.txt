@@ -22,8 +22,8 @@ CREATE TABLE `hotels` (
   `description` varchar (250) ,
   `location` varchar (250) ,
   `active` boolean,
-  `checkin` datetime,
-  `checkout` datetime,
+  `checkin` timestamp,
+  `checkout` timestamp,
   `create_at` timestamp,
   `updated_at` timestamp,
   PRIMARY KEY (`id`)
