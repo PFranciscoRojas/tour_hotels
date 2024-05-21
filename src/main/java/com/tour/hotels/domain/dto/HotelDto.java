@@ -1,6 +1,7 @@
 package com.tour.hotels.domain.dto;
 
-import java.security.Timestamp;
+
+import java.util.Date;
 
 public class HotelDto {
   private Integer hotelId;
@@ -8,10 +9,10 @@ public class HotelDto {
   private String ubicacion;
   private String descripcion;
   private boolean activa;
-  //private Timestamp entrada;
-  //private Timestamp salida;
-  //private Timestamp fechaRegistro;
-  //private Timestamp fechaSalida;
+  private Date entrada;
+  private Date salida;
+  private Date fechaRegistro;
+  private Date fechaSalida;
 
   public Integer getHotelId() {
     return hotelId;
@@ -53,4 +54,35 @@ public class HotelDto {
     this.activa = activa;
   }
 
+  public Date getEntrada() {
+    return entrada;
+  }
+
+  public void setEntrada(Date entrada) {
+    this.entrada = entrada;
+  }
+
+  public Date getSalida() {
+    return salida;
+  }
+
+  public void setSalida(Date salida) {
+    this.salida = salida;
+  }
+
+  public Date getFechaRegistro() {
+    return fechaRegistro;
+  }
+
+  public void setFechaRegistro(Date fechaRegistro) {
+    this.fechaRegistro = fechaRegistro;
+  }
+
+  public Date getFechaSalida() {
+    return fechaSalida;
+  }
+
+  public void setFechaSalida(Date fechaSalida) {
+    this.fechaSalida = fechaSalida;
+  }
 }
