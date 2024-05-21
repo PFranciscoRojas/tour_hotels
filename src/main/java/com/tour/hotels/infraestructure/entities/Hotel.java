@@ -1,16 +1,11 @@
 package com.tour.hotels.infraestructure.entities;
 
 import jakarta.persistence.*;
-
 import java.security.Timestamp;
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "hotels")
 public class Hotel {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

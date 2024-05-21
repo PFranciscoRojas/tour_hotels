@@ -8,15 +8,10 @@ public class HotelDto {
   private String ubicacion;
   private String descripcion;
   private boolean activa;
-  private Timestamp entrada;
-  private Timestamp salida;
-  private Timestamp fechaRegistro;
-  private Timestamp fechaSalida;
-  private String habitacionesDisponibles;
-  private Timestamp Registro;
-  private Timestamp Salida;
-  private Timestamp FechaRegistro;
-  private Timestamp FechaSalida;
+  //private Timestamp entrada;
+  //private Timestamp salida;
+  //private Timestamp fechaRegistro;
+  //private Timestamp fechaSalida;
 
   public Integer getHotelId() {
     return hotelId;
@@ -58,51 +53,4 @@ public class HotelDto {
     this.activa = activa;
   }
 
-  public Timestamp getSalida() {
-    return salida;
-  }
-
-  public void setSalida(Timestamp salida) {
-    this.salida = salida;
-  }
-
-  public Timestamp getEntrada() {
-    return entrada;
-  }
-
-  public void setEntrada(Timestamp entrada) {
-    this.entrada = entrada;
-  }
-
-  public Timestamp getFechaRegistro() {
-    return fechaRegistro;
-  }
-
-  public void setFechaRegistro(Timestamp fechaRegistro) {
-    this.fechaRegistro = fechaRegistro;
-  }
-
-  public Timestamp getFechaSalida() {
-    return fechaSalida;
-  }
-
-  public void setFechaSalida(Timestamp fechaSalida) {
-    this.fechaSalida = fechaSalida;
-  }
-
-  public String getHabitacionesDisponibles() {
-    return habitacionesDisponibles;
-  }
-
-  public void setHabitacionesDisponibles(String habitacionesDisponibles) {
-    this.habitacionesDisponibles = habitacionesDisponibles;
-  }
-
-  public Timestamp getRegistro() {
-    return Registro;
-  }
-
-  public void setRegistro(Timestamp registro) {
-    Registro = registro;
-  }
 }

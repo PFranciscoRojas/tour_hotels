@@ -17,6 +17,7 @@ public class HotelController {
     public List<HotelDto> getAll(){
         return hotelSrv.getAll();
     }
+
     @GetMapping("{id}")
     public Optional<HotelDto> getByID(@PathVariable("id") long hotelId){
         return hotelSrv.getByID(hotelId);

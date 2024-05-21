@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/start")
 public class FirstController {
-    @GetMapping("/*hotel")
+    @GetMapping("/hotel")
     public String firstHello() {
         return "Hotel ";
     }

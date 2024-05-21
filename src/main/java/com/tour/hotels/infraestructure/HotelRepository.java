@@ -15,6 +15,7 @@ import java.util.Optional;
 public class HotelRepository implements HotelesRepository {
     @Autowired
     public HotelCroudRepository hotelRepo;
+
     @Autowired
     public HotelMapper hotelMapper;
     @Override
