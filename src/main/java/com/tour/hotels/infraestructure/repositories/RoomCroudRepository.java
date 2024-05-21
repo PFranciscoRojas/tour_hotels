@@ -1,8 +1,13 @@
 package com.tour.hotels.infraestructure.repositories;
 
-
-import com.tour.hotels.infraestructure.entities.Hotel;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RoomCroudRepository extends CrudRepository<Hotel,Integer> {
+
+import com.tour.hotels.infraestructure.entities.Room;
+
+
+
+@Repository
+public interface RoomCroudRepository extends CrudRepository<Room, Long>{
 }

@@ -21,8 +21,8 @@ public class Hotel {
     @Column(name = "create_at")
     private Date createAt;
     @Column(name = "updated_at")
-    private Date updatedAt;
 
+    private Date updatedAt;
     public Integer getIdHotel() {
         return idHotel;
     }

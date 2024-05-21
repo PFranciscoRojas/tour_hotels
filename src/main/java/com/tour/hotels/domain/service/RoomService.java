@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.tour.hotels.domain.dto.RoomDto;
 import com.tour.hotels.domain.repository.HabitacionRepository;
 
+
 @Service
 public class RoomService {
     @Autowired
@@ -30,4 +31,20 @@ public class RoomService {
         }
         return false;
     }
-}
+    public boolean isRoomAviable(Long id){
+        if(getById(id).isPresent()){
+            habitacionRepository.isRoomAviable(id);
+            return true;
+        }
+        return false;
+    }
+
+  public int whatIsItCapacity(int id){
+    final int areaTotal = 70;
+    final int areaPorPersona = 6;
+    final int capacidadHab = whatIsItCapacity(areaTotal);
+
+    int capacid = areaTotal / areaPorPersona;
+    return capacid;
+  }
+    }

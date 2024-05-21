@@ -11,30 +11,25 @@ import org.mapstruct.Mappings;
 import com.tour.hotels.domain.dto.RoomDto;
 import com.tour.hotels.infraestructure.entities.Room;
 
-@Mapper(componentModel = "Spring", uses = {ReservationMapper.class})
-public interface RoomMapper {
+@Mapper(componentModel = "spring", uses = {ReservationMapper.class})
+public interface RoomMapper{
     @Mappings({
-        
-        @Mapping(source = "id", target = "ide"),
-        @Mapping(source = "status", target = "roomState"),
-        @Mapping(source = "price" , target = "cost"),
-        @Mapping(source = "capacity", target = "capacy"),
-        @Mapping(source = "time" , target = "duration"),
-        @Mapping(source = "date" , target = "appointment"),
-        @Mapping(source = "type", target = "kind")
-
+        @Mapping(source = "id",target = "idHabitacion"),
+        @Mapping(source = "capacity",target = "capacidad"),
+        @Mapping(source = "status",target = "estado"),
+        @Mapping(source = "type",target = "tipoHabitacion"),
+        @Mapping(source = "price",target = "costo"),
     })
-    
-    RoomDto toRoomdDto(Room room);
-    
-    List<RoomDto> toRoomDtos(List<Room> rooms);
-    
-    default Optional<RoomDto> toRoomDtosOptional(Optional<Room> room){
-        return room.map(this::toRoomdDto);
+    RoomDto aRoomDto(Room room);
+    List<RoomDto> aRoomDto(List<Room> room);
+    default Optional<RoomDto> aRoomDtoOptional(Optional <Room> room){
+        return room.map(this::aRoomDto);
+    }
+    @InheritInverseConfiguration
+    Room aRoom(RoomDto roomDto);
 }
 
-@InheritInverseConfiguration
 
-Room toRoom(RoomDto roomDto);
 
-}
+
+
