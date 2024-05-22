@@ -31,7 +31,7 @@ CREATE TABLE `hotels` (
 
 CREATE TABLE `Rooms` (
   `id` integer,
-  `capacitity` integer,
+  `capacity` integer,
   `date` date,
   `time` time,
   `status` boolean,
