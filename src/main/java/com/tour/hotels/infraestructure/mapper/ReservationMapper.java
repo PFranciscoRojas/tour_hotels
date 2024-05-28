@@ -19,7 +19,8 @@ public interface ReservationMapper {
             @Mapping(source = "time", target ="hora"),
             @Mapping(source = "payment", target ="pago"),
             @Mapping(source = "status", target ="estado"),
-            @Mapping(source = "totalDays", target ="totalDias")
+            @Mapping(source = "totalDays", target ="totalDias"),
+            //@Mapping(source = "idRoom", target ="idHabitacion")
 
     })
     ReservationDto toReservationDto(Reservation reservation);

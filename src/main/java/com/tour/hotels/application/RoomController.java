@@ -15,7 +15,7 @@ import com.tour.hotels.domain.dto.RoomDto;
 import com.tour.hotels.domain.service.RoomService;
 
 @RestController
-@RequestMapping("/Room")
+@RequestMapping("/rooms")
 
 public class RoomController {
     @Autowired 
