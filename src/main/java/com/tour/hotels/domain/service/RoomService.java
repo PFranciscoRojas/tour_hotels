@@ -39,12 +39,12 @@ public class RoomService {
         return false;
     }
 
-  public int whatIsItCapacity(int id){
-    final int areaTotal = 70;
-    final int areaPorPersona = 6;
-    final int capacidadHab = whatIsItCapacity(areaTotal);
+    public int whatIsItCapacity(int id){
+        final int areaTotal = 70;
+        final int areaPorPersona = 6;
+        final int capacidadHab = whatIsItCapacity(areaTotal);
 
-    int capacid = areaTotal / areaPorPersona;
-    return capacid;
-  }
+        int capacid = areaTotal / areaPorPersona;
+        return capacid;
     }
+}

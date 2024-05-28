@@ -11,6 +11,7 @@ public class ReservationDto {
     private boolean estado;
     private  Integer totalDias;
     private boolean pago;
+    //private Integer idHabitacion;
 
     public Integer getReservacionId() {
         return reservacionId;
@@ -67,5 +68,13 @@ public class ReservationDto {
     public void setPago(boolean pago) {
         this.pago = pago;
     }
+
+    //public Integer getIdHabitacion() {
+    //    return idHabitacion;
+    //}
+
+    //public void setIdHabitacion(Integer idHabitacion) {
+    //    this.idHabitacion = idHabitacion;
+    //}
 }
 

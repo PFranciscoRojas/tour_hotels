@@ -1,13 +1,12 @@
 package com.tour.hotels.infraestructure.entities;
 
-import java.security.Timestamp;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "rooms")
+@Table(name = "Rooms")
 public class Room {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +17,7 @@ private Time time;
 private Boolean status;
 private String type;
 private double price;
-@Column (name = "Create_at")
+@Column (name = "Created_at")
 private Date createdAt;
 @Column (name = "updated_at")
 private Date updatedAt;
